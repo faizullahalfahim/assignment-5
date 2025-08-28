@@ -74,6 +74,14 @@ for (let btn of callBtns){
     
     }) 
 }
+// clear button functionality
+const clearBtn = document.getElementById('clear-button');
+const historyContainer= document.getElementById('history-container');
+let callHistoryContainer =[];
+clearBtn.addEventListener('click',function(){
+    callHistoryContainer= []; 
+    historyContainer.innerHTML= "";
+})
 
 
 
