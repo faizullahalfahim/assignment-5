@@ -7,7 +7,28 @@ for (let icon of icons){
         count++
         heartCountElement.innerText = count; 
     })
+
 }
+// copy button functionality
+let copyBtns = document.getElementsByClassName('copy-button');
+let copyCountElement = document.getElementById('copy-count');
+let copyCount= 0; 
+
+
+
+for (let copy of copyBtns){
+    copy.addEventListener ('click',function(){
+        const card = copy.closest ('.card');
+        let number = card.querySelector('.service-number').innerText;
+        navigator.clipboard.writeText (`${number}`)
+        copyCount++
+        copyCountElement.innerText = copyCount;
+        alert('Copied:'+ number)
+    })
+
+}
+
+
 
 // call button functionality
 
